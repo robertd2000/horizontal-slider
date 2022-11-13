@@ -42,22 +42,32 @@ body {
   font-weight: 500;
   font-size: 24px;
   line-height: 33px;
-  display: flex;
   align-items: center;
   text-align: center;
 
   color: #ffffff;
 }
 .logo {
-  margin-top: 1%;
   display: flex;
   vertical-align: middle;
 }
 
-.logo img {
-  margin-top: 10%;
+.logo .logo-img {
+  margin-top: 15%;
   width: 36px;
   height: 36px;
+}
+
+.logo-title {
+  margin-left: 6px;
+  width: 100px;
+}
+
+.phone-full {
+  display: block;
+}
+.phone-short {
+  display: none;
 }
 
 /* main */
@@ -215,12 +225,39 @@ div {
 }
 
 @media (max-width: 500px) {
+  #root {
+    width: 100%;
+  }
   .nav-inner {
     margin: 0;
+    margin-left: 15px;
   }
+
+  .logo .logo-img {
+    margin-top: 0;
+  }
+
+  .phone {
+    margin-top: 2%;
+    margin-right: 12%;
+  }
+
+  .phone-full {
+    display: none;
+  }
+
+  .phone-short {
+    display: block;
+  }
+
   .container {
     margin-left: 0px;
   }
+
+  .title {
+    font-size: 24px;
+  }
+
   .card {
     width: 100%;
 
@@ -234,13 +271,23 @@ div {
     margin: 0 auto;
     max-height: 500px;
   }
+
   .card img {
     width: 500px;
     height: 500px;
     object-fit: cover;
   }
+
   .title {
-    margin: 30px 10px;
+    margin: 30px 25px;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .content h2 {
+    font-size: 24px;
   }
 
   .card.right {
@@ -255,6 +302,7 @@ div {
     margin: 0 auto;
     max-height: 500px;
   }
+
   .card.right img {
     width: 500px;
     height: 500px;
